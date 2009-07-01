@@ -1,5 +1,5 @@
 ---
-abstract: 'A unified metadata database for the CPAN index'
+abstract: 'A unified database for the CPAN index and related data'
 author:
   - 'Adam Kennedy <adamk@cpan.org>'
 build_requires:
@@ -28,4 +28,4 @@ resources:
   ChangeLog: http://fisheye2.atlassian.com/changelog/cpan/trunk/CPANDB
   license: http://dev.perl.org/licenses/
   repository: http://svn.ali.as/cpan/trunk/CPANDB
-version: 0.01
+version: 0.02

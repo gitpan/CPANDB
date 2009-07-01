@@ -1,6 +1,6 @@
 =head1 NAME
 
-CPANDB::Author - CPANDB class for the author table
+CPANDB::Requires - CPANDB class for the requires table
 
 =head1 SYNOPSIS
 
@@ -15,43 +15,43 @@ TO BE COMPLETED
 =head2 select
 
   # Get all objects in list context
-  my @list = CPANDB::Author->select;
+  my @list = CPANDB::Requires->select;
   
   # Get a subset of objects in scalar context
-  my $array_ref = CPANDB::Author->select(
-      'where author > ? order by author',
+  my $array_ref = CPANDB::Requires->select(
+      'where distribution > ? order by distribution',
       1000,
   );
 
 The C<select> method executes a typical SQL C<SELECT> query on the
-author table.
+requires table.
 
 It takes an optional argument of a SQL phrase to be added after the
-C<FROM author> section of the query, followed by variables
+C<FROM requires> section of the query, followed by variables
 to be bound to the placeholders in the SQL phrase. Any SQL that is
 compatible with SQLite can be used in the parameter.
 
-Returns a list of B<CPANDB::Author> objects when called in list context, or a
-reference to an ARRAY of B<CPANDB::Author> objects when called in scalar context.
+Returns a list of B<CPANDB::Requires> objects when called in list context, or a
+reference to an ARRAY of B<CPANDB::Requires> objects when called in scalar context.
 
 Throws an exception on error, typically directly from the L<DBI> layer.
 
 =head2 count
 
   # How many objects are in the table
-  my $rows = CPANDB::Author->count;
+  my $rows = CPANDB::Requires->count;
   
   # How many objects 
-  my $small = CPANDB::Author->count(
-      'where author > ?',
+  my $small = CPANDB::Requires->count(
+      'where distribution > ?',
       1000,
   );
 
 The C<count> method executes a C<SELECT COUNT(*)> query on the
-author table.
+requires table.
 
 It takes an optional argument of a SQL phrase to be added after the
-C<FROM author> section of the query, followed by variables
+C<FROM requires> section of the query, followed by variables
 to be bound to the placeholders in the SQL phrase. Any SQL that is
 compatible with SQLite can be used in the parameter.
 
@@ -61,9 +61,9 @@ Throws an exception on error, typically directly from the L<DBI> layer.
 
 =head1 ACCESSORS
 
-=head2 author
+=head2 distribution
 
-  if ( $object->author ) {
+  if ( $object->distribution ) {
       print "Object has been inserted\n";
   } else {
       print "Object has not been inserted\n";
@@ -76,17 +76,22 @@ REMAINING ACCESSORS TO BE COMPLETED
 
 =head1 SQL
 
-The author table was originally created with the
+The requires table was originally created with the
 following SQL command.
 
-  CREATE TABLE author (
-  	author TEXT NOT NULL PRIMARY KEY,
-  	name TEXT NOT NULL
+  CREATE TABLE requires (
+  	distribution TEXT NOT NULL,
+  	module TEXT NOT NULL,
+  	version TEXT NULL,
+  	phase TEXT NOT NULL,
+  	PRIMARY KEY ( distribution, module, phase ),
+  	FOREIGN KEY ( distribution ) REFERENCES distribution ( distribution ),
+  	FOREIGN KEY ( module ) REFERENCES module ( module )
   )
 
 =head1 SUPPORT
 
-CPANDB::Author is part of the L<CPANDB> API.
+CPANDB::Requires is part of the L<CPANDB> API.
 
 See the documentation for L<CPANDB> for more information.
 

@@ -1,15 +1,11 @@
 NAME
-    CPANDB - A unified metadata database for the CPAN index
+    CPANDB - A unified database for the CPAN index and related data
 
 SYNOPSIS
       TO BE COMPLETED
 
 DESCRIPTION
-    This is an experimental ORLite module that provides an ORM class tree
-    for the <http://svn.ali.as/db/cpandb.sqlite.gz> unified index database.
-
-    Please excuse the limited POD for the moment, I'll expand it with more
-    detail later.
+    TO BE COMPLETED
 
 METHODS
   dsn
@@ -122,7 +118,7 @@ METHODS
     for a datase. See the SQLite documentation for more details.
 
 SUPPORT
-    CPANDB is based on ORLite 1.22 and ORLite::Mirror 1.15.
+    CPANDB is based on ORLite 1.22.
 
     Documentation created by ORLite::Pod 0.06.
 
