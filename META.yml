@@ -1,7 +1,7 @@
 ---
-abstract: 'A unified database for the CPAN index and related data'
+abstract: 'An ORLite-based ORM Database API'
 author:
-  - 'Adam Kennedy <adamk@cpan.org>'
+  - 'The Author'
 build_requires:
   ExtUtils::MakeMaker: 6.42
   LWP::Online: 1.07
@@ -21,11 +21,13 @@ no_index:
     - inc
     - t
 requires:
+  Getopt::Long: 2.33
   ORLite::Mirror: 1.15
   Params::Util: 1.00
+  Time::HiRes: 1.97
   perl: 5.8.5
 resources:
   ChangeLog: http://fisheye2.atlassian.com/changelog/cpan/trunk/CPANDB
   license: http://dev.perl.org/licenses/
   repository: http://svn.ali.as/cpan/trunk/CPANDB
-version: 0.02
+version: 0.05

@@ -1,5 +1,5 @@
 NAME
-    CPANDB - A unified database for the CPAN index and related data
+    CPANDB - An ORLite-based ORM Database API
 
 SYNOPSIS
       TO BE COMPLETED
@@ -118,7 +118,7 @@ METHODS
     for a datase. See the SQLite documentation for more details.
 
 SUPPORT
-    CPANDB is based on ORLite 1.22.
+    CPANDB is based on ORLite 1.23.
 
     Documentation created by ORLite::Pod 0.06.
 
@@ -126,10 +126,10 @@ SUPPORT
     documentation.
 
 AUTHOR
-    Adam Kennedy <adamk@cpan.org>
+    The Author
 
 COPYRIGHT
-    Copyright 2009 Adam Kennedy.
+    Copyright 2009 The Author.
 
     This program is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.
