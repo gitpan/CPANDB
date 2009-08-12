@@ -4,7 +4,7 @@ use 5.008005;
 use strict;
 use warnings;
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 
 
@@ -133,6 +133,8 @@ sub _dependants {
 	my %seen = ( $self->distribution => 1 );
 	while ( @todo ) {
 		my $name = shift @todo;
+		next if $name =~ /^Task-/;
+		next if $name =~ /^Acme-Mom/;
 		$graph->$add_node( $name );
 
 		# Find the distinct dependencies for this node
