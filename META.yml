@@ -22,7 +22,9 @@ no_index:
     - t
 requires:
   Getopt::Long: 2.33
+  ORLite: 1.25
   ORLite::Mirror: 1.15
+  ORLite::Statistics: 0.01
   Params::Util: 1.00
   Time::HiRes: 1.97
   perl: 5.8.5
@@ -30,4 +32,4 @@ resources:
   ChangeLog: http://fisheye2.atlassian.com/changelog/cpan/trunk/CPANDB
   license: http://dev.perl.org/licenses/
   repository: http://svn.ali.as/cpan/trunk/CPANDB
-version: 0.09
+version: 0.10
