@@ -1,6 +1,10 @@
 Changes for Perl extension CPANDB
 
-0.12
+0.13 Mon 19 Apr 2010
+	- Updated ORLite::POD-generated documentation.
+	- Added documentation on additional methods
+
+0.12 Mon 26 Oct 2009
 	- Added documentation for cpangraph (in POD)
 
 0.11 Thu  1 Oct 2009

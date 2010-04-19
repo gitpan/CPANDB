@@ -8,7 +8,7 @@ use Params::Util         ();
 use ORLite::Mirror       ();
 use CPANDB::Distribution ();
 
-our $VERSION = '0.12';
+our $VERSION = '0.13';
 
 sub import {
 	my $class  = shift;
@@ -17,6 +17,11 @@ sub import {
 	# Pass through any params from above
 	$params->{url}    ||= 'http://svn.ali.as/db/cpandb.bz2';
 	$params->{maxage} ||= 24 * 60 * 60; # One day
+
+	# Always turn on string eval debugging if Perl is new enough
+	if ( $^V > 5.008008 ) {
+		$^P = $^P | 0x800;
+	}
 
 	# Prevent double-initialisation
 	$class->can('orlite') or
