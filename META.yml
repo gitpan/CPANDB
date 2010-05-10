@@ -1,7 +1,7 @@
 ---
 abstract: 'An ORLite-based ORM Database API'
 author:
-  - '- 2010 Adam Kennedy.'
+  - 'Adam Kennedy <adamk@cpan.org>'
 build_requires:
   ExtUtils::MakeMaker: 6.42
   LWP::Online: 1.07
@@ -9,7 +9,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.42
 distribution_type: module
-generated_by: 'Module::Install version 0.95'
+generated_by: 'Module::Install version 0.97'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -24,8 +24,7 @@ no_index:
 requires:
   DateTime: 0.50
   Getopt::Long: 2.33
-  ORLite: 1.25
-  ORLite::Mirror: 1.15
+  ORLite::Mirror: 1.20
   ORLite::Statistics: 0.03
   Params::Util: 1.00
   Time::HiRes: 1.97
@@ -34,4 +33,4 @@ resources:
   ChangeLog: http://fisheye2.atlassian.com/changelog/cpan/trunk/CPANDB
   license: http://dev.perl.org/licenses/
   repository: http://svn.ali.as/cpan/trunk/CPANDB
-version: 0.13
+version: 0.14

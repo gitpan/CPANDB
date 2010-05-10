@@ -155,7 +155,7 @@ METHODS
       my $version = CPANDB->pragma('user_version');
 
     The "pragma" method provides a convenient method for fetching a pragma
-    for a datase. See the SQLite documentation for more details.
+    for a database. See the SQLite documentation for more details.
 
   distribution
       my $dist = CPANDB->distribution('Config-Tiny');
@@ -176,12 +176,18 @@ METHODS
     dependency in any code that uses Graph features.
 
 SUPPORT
-    CPANDB is based on ORLite $ORLite::VERSION.
+    CPANDB is based on ORLite.
 
-    Documentation created by ORLite::Pod $ORLite::Pod::VERSION.
+    Documentation created by ORLite::Pod 0.08.
 
-    For general support please see the support section of the main project
-    documentation.
+    Bugs should be reported via the CPAN bug tracker at
+
+    <http://rt.cpan.org/NoAuth/ReportBug.html?Queue=CPANDB>
+
+    For other issues, contact the author.
+
+AUTHOR
+    Adam Kennedy <adamk@cpan.org>
 
 COPYRIGHT
     Copyright 2009 - 2010 Adam Kennedy.
