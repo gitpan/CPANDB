@@ -37,6 +37,7 @@
          "requires" : {
             "DateTime" : "0.50",
             "Getopt::Long" : "2.33",
+            "ORLite" : "1.51",
             "ORLite::Mirror" : "1.20",
             "ORLite::Statistics" : "0.03",
             "Params::Util" : "1.00",
@@ -55,6 +56,6 @@
       },
       "x_ChangeLog" : "http://fisheye2.atlassian.com/changelog/cpan/trunk/CPANDB"
    },
-   "version" : "0.16",
+   "version" : "0.17",
    "x_module_name" : "CPANDB"
 }
