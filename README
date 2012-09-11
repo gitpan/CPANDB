@@ -1,9 +1,10 @@
 NAME
-    CPANDB - An ORLite-based ORM Database API
+    CPANDB - A unified database of CPAN metadata information
 
 DESCRIPTION
     CPANDB is an module for accessing CPAN metadata merged from many
-    different CPAN websites into a single simple object model.
+    different CPAN websites into a single object model, downloaded
+    automatically and without the need for any configuration.
 
 METHODS
   dsn
@@ -172,7 +173,7 @@ AUTHOR
     Adam Kennedy <adamk@cpan.org>
 
 COPYRIGHT
-    Copyright 2009 - 2011 Adam Kennedy.
+    Copyright 2009 - 2012 Adam Kennedy.
 
     This program is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.
